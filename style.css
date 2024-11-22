@@ -1,0 +1,212 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f8f8f8;
+}
+
+/* Welcome Section */
+.welcome {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('messi-bg.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1.5s;
+}
+
+.welcome .highlight {
+    color: #ffcc00;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 2s;
+}
+
+.welcome button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: #ffcc00;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: fadeInUp 2s;
+}
+
+.welcome button:hover {
+    background: #f1b800;
+}
+
+/* Keyframes for Welcome Animation */
+@keyframes fadeInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Header */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo span {
+    color: #ffcc00;
+}
+
+.navbar a {
+    margin-left: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+/* About Section */
+.about .achievements {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.about .achievement h3 {
+    font-size: 2rem;
+    color: #ffcc00;
+}
+
+.about .achievement p {
+    margin: 0;
+}
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+/* Heatmap Section */
+.heatmap-placeholder {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+/* Style dla sekcji analizy heatmapy */
+.heatmap-analysis {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.heatmap-analysis h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.heatmap-analysis h3 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #444;
+    text-decoration: underline;
+}
+
+.heatmap-analysis p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 10px 0;
+}
+
+.heatmap-analysis ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.heatmap-analysis ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.heatmap-analysis ul li strong {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.heatmap-analysis .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .heatmap-analysis h2 {
+        font-size: 2rem;
+    }
+    .heatmap-analysis p,
+    .heatmap-analysis ul li {
+        font-size: 1rem;
+    }
+}
