@@ -1,22 +1,25 @@
+// Smooth scroll function
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 }
-// Skrypt do rozwijania sekcji tekstu
+
+// Script to toggle text sections
 document.addEventListener("DOMContentLoaded", function() {
     const toggleButtons = document.querySelectorAll('.toggle-button');
 
     toggleButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const content = this.previousElementSibling;
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block';
-                this.textContent = 'Pokaż mniej';
-            } else {
-                content.style.display = 'none';
+            const content = this.nextElementSibling;  // Find the content to show/hide
+            content.classList.toggle('hidden');  // Toggle the 'hidden' class
+
+            // Update the button text based on visibility
+            if (content.classList.contains('hidden')) {
                 this.textContent = 'Pokaż więcej';
+            } else {
+                this.textContent = 'Pokaż mniej';
             }
         });
     });
