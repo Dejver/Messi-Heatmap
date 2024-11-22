@@ -148,6 +148,14 @@
         <p>&copy; 2024 MessiMagic. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
